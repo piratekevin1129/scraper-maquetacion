@@ -4,7 +4,7 @@
     height: 100%;
     top: 0px;
     left: 0px;
-    background-color: #0c0f1b;
+    background-color: rgba(12,15,27,0.8);
 }
 
 .loader-on{

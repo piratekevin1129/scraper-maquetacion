@@ -1,0 +1,111 @@
+.container{
+    position: relative;
+    width: 100%;
+}
+
+#app-container{
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    padding: 50px;
+    background-color: #101322;
+
+    transition: width 1s, margin 1s;
+}
+
+.app-container-close{
+    width: 100%;
+    margin-left: 0px;
+}
+.app-container-open{
+    width: auto;
+    width: calc(100% - 300px);
+    width: -moz-calc(100% - 300px);
+    margin-left: 300px;
+}
+
+.col-title-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-title-button h1{
+    display: block;
+    width: auto;
+    width: calc(100% - 250px);
+    width: -moz-calc(100% - 250px);
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.col-title-button button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 240px;
+    height: 50px;
+    background-color: #1337ec;
+    overflow: hidden;
+    border-radius: 6px;
+    border-color: #1337ec;
+    border-style: solid;
+    border-width: 2px;
+    padding: 0px 20px;
+
+    transition: border-color 0.25s, opacity 0.25s, box-shadow 0.25s;
+}
+.col-title-button button i{
+    width: 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.col-title-button button span{
+    position: relative;
+    max-width: auto;
+    max-width: calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    font-family: 'Inter';
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+
+    transition: color 0.25s;
+}
+.col-title-button button::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    transition: width 0.25s, height 0.25s, opacity 0.25s;
+}
+
+.col-title-button button:enabled:hover::before{
+    width: 100%;
+    width: calc(100% + 5px);
+    width: -moz-calc(100% + 5px);
+    height: 250px;
+    opacity: 0.2;
+}
+
+.col-title-button button:disabled{
+    cursor: not-allowed !important;
+    border-color: rgba(255,255,255,0.5) !important;
+}
+.col-title-button button:disabled span{
+    color: rgba(255,255,255,0.5);
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper Manager</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    
+    <link href="assets/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/app.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/menu-lateral.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/buscador.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/tabla.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/paginador.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/loader.css" type="text/css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/40deba9f5e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <section id="app-container" class="app-container-open">
+            <div class="col-title-button mb-4">
+                <h1>Instagram Scraper Manager</h1>
+                <button type="button">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add New Source</span>
+                </button>
+            </div>
+
+            <div class="buscador-container mb-6">
+                <div class="buscador-form-group buscador-form-group-out px-4">
+                    <div>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input name="buscador" type="text" placeholder="Buscar perfiles o términos" autocomplete="off" onfocus="focusBuscador(event)" onblur="blurBuscador(event)" />
+                </div>
+            </div>
+
+            <div class="scraper-table-container mb-6">
+                <table class="scraper-table col1-2_5 col2-2 col3-1_5 col4-3_5 col5-0_5" cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <th><span>Profile/Term</span></th>
+                        <th><span>Last Scraped</span></th>
+                        <th><span>Total posts</span></th>
+                        <th><span>Status</span></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>@nasa</span>
+                            </td>
+                            <td>
+                                <span>hace 2 horas</span>
+                            </td>
+                            <td>
+                                <span>1,450</span>
+                            </td>
+                            <td>
+                                <div class="status-container status-container-done">
+                                    <span class="status-tag">Done</span>
+                                    <div class="status-progressbar"><div></div></div>
+                                    <span class="status-percent">100%</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="table-options-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>@nasa</span>
+                            </td>
+                            <td>
+                                <span>hace 2 horas</span>
+                            </td>
+                            <td>
+                                <span>1,450</span>
+                            </td>
+                            <td>
+                                <div class="status-container status-container-updating">
+                                    <span class="status-tag">Updating</span>
+                                    <div class="status-progressbar"><div></div></div>
+                                    <span class="status-percent">100%</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="table-options-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="scraper-paginador-container">
+                <div class="scraper-paginador">
+                    <a class="scraper-paginador-btn">
+                        <i class="fas fa-angle-left"></i>
+                    </a>
+                    <div class="scraper-pages">
+                        <a class="scraper-paginador-btn">
+                            <span>1</span>
+                        </a>
+                        <a class="scraper-paginador-btn">
+                            <span>2</span>
+                        </a>
+                        <a class="scraper-paginador-btn">
+                            <span>...</span>
+                        </a>
+                        <a class="scraper-paginador-btn">
+                            <span>9</span>
+                        </a>
+                        <a class="scraper-paginador-btn">
+                            <span>10</span>
+                        </a>
+                    </div>
+                    <a class="scraper-paginador-btn">
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu-lateral-container" class="menu-lateral-open">
+            <div class="menu-lateral-coltop">
+                <div class="menu-lateral-logo">
+                    <img src="assets/images/logo.svg" />
+                    <h1>SocialScraper</h1>
+                </div>
+                <nav id="menu-lateral">
+                    <ul>
+                        <li>
+                            <a class="menu-lateral-btn">
+                                <i class="fas fa-border-all"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-lateral-btn">
+                                <i class="fas fa-camera"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-lateral-colbot">
+                <a class="menu-lateral-btn">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <div class="menu-lateral-profile">
+                    <div class="profile-photo">
+                        <img src="assets/images/profile-picture.png" />
+                    </div>
+                    <div class="profile-info">
+                        <p class="profile-info-name">Joe Jonas</p>
+                        <p class="profile-info-email">joejonas@scraper.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="loader" class="loader-off">
+        <div id="loader-box">
+            <div id="loader-ball"></div>
+            <div id="loader-mask"></div>
+            <!--<p>Cargando</p>-->
+        </div>
+    </div>
+
+    <script>
+        function focusBuscador(event){
+            let current_class = event.target.parentNode.className
+            let new_class = current_class.replace('out','over')
+            event.target.parentNode.className = new_class
+        }
+        
+        function blurBuscador(event){
+            let current_class = event.target.parentNode.className
+            let new_class = current_class.replace('over','out')
+            event.target.parentNode.className = new_class
+        }
+    </script>
+</body>
+</html>

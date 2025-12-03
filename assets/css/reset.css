@@ -11,13 +11,25 @@ button{
 p,h1,h2,h3,h4,h5,h6{
     margin: 0px;
     padding: 0px;
-    line-height: normal;
     text-align: left;
     font-weight: normal;
     font-family: 'Inter';
+    line-height: normal;
 }
 label{
     font-family: 'Inter';
+}
+
+ul{
+    list-style: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 form{
@@ -37,11 +49,15 @@ input[type=password]{
     font-weight: normal;
     line-height: normal;
     text-align: left;
-    border-radius: 6px;
 }
 
 div,section{
     box-sizing: border-box;
+}
+
+img{
+    display: block;
+    margin: 0px;
 }
 
 a{
@@ -102,11 +118,6 @@ a:hover{
 .mb-5{margin-bottom: 25px;}
 .mb-6{margin-bottom: 30px;}
 .mb-7{margin-bottom: 35px;}
-
-.container{
-    position: relative;
-    width: 100%;
-}
 
 .d-flex{
     display: flex;
