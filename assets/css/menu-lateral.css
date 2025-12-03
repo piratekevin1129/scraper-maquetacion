@@ -1,9 +1,9 @@
 #menu-lateral-container{
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 302px;
-    min-height: 100vh;
+    height: 100%;
     background-color: #101322;
     padding: 20px;
     display: flex;
@@ -12,6 +12,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     border-right: #1f2937 solid 2px;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,1);
 
     transition: left 1s, filter 1s;
 }
@@ -115,7 +116,8 @@
     transition: color 0.25s;
 }
 
-.menu-lateral-btn:hover::before{
+.menu-lateral-btn:hover::before,
+.menu-lateral-btn-active::before{
     width: 100%;
     width: calc(100% + 5px);
     width: -moz-calc(100% + 5px);
@@ -123,7 +125,9 @@
     opacity: 0.2;
 }
 .menu-lateral-btn:hover span,
-.menu-lateral-btn:hover i{
+.menu-lateral-btn:hover i,
+.menu-lateral-btn-active span,
+.menu-lateral-btn-active i{
     color: #4362ff;
 }
           

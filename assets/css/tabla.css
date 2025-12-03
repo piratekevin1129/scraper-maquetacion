@@ -1,11 +1,18 @@
-.scraper-table-container{
+.scraper-table-container,
+.scraper-table2-container{
     position: relative;
     width: 100%;
-    border-radius: 6px;
     overflow: hidden;
     border: #1f2937 solid 2px;
 }
-.scraper-table{
+.scraper-table-container{
+    border-radius: 6px;
+}
+.scraper-table2-container{
+    border-radius: 12px;
+}
+.scraper-table,
+.scraper-table2{
     position: relative;
     width: 100%;
     table-layout: fixed;
@@ -15,13 +22,22 @@
 .scraper-table thead{
     background-color: #101625;
 }
-
-.scraper-table th{
-    box-sizing: border-box;
-    padding: 15px;
-    text-align: left;
+.scraper-table2 thead{
+    background-color: #1f2937;
 }
-.scraper-table th span{
+
+.scraper-table th,
+.scraper-table2 th{
+    box-sizing: border-box;
+    text-align: left;
+    padding: 15px;
+}
+.th-center{
+    text-align: center !important;
+}
+
+.scraper-table th span,
+.scraper-table2 th span{
     font-family: 'Inter';
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -29,22 +45,35 @@
     font-weight: 600;
 }
 
-.scraper-table td{
+.scraper-table td,
+.scraper-table2 td{
     box-sizing: border-box;
+}
+.scraper-table td{
     padding: 25px 15px;
 }
-.scraper-table td > span{
+.scraper-table2 td{
+    padding: 15px 15px;
+}
+.scraper-table td > span,
+.scraper-table2 td > span{
     font-family: 'Inter';
     font-size: 0.9rem;
     color: #9ca3af;
     text-align: left;
 }
 
-.scraper-table tbody > tr{
+.scraper-table tbody > tr,
+.scraper-table2 tbody > tr{
     transition: background-color 0.15s;
     border-bottom: #1f2937 solid 2px;
 }
-.scraper-table tbody > tr:last-child{
+.scraper-table2 tbody > tr{
+    background-color: #181e2d;
+}
+
+.scraper-table tbody > tr:last-child,
+.scraper-table2 tbody > tr:last-child{
     border-bottom: none;
 }
 .scraper-table tbody > tr:nth-child(even){
@@ -53,10 +82,10 @@
 .scraper-table tbody > tr:nth-child(odd){
     background-color: #171925;
 }
-.scraper-table tbody > tr:hover{
+.scraper-table tbody > tr:hover,
+.scraper-table2 tbody > tr:hover{
     background-color: rgba(255,255,255, 0.15);
 }
-
 
 .status-container{
     position: relative;
@@ -132,19 +161,63 @@
     color: #6b7280;
 }
 
+.status2-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.status2-container span{
+    display: flex;
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 500;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.status2-container-completed span{
+    background-color: #14532d;
+}
+.status2-container-failed span{
+    background-color: #7f1d1d;
+}
+.status2-container-processing span{
+    background-color: #1e3a8a;
+}
+
+/*******DIVISIONS********/
 
 .col1-2_5 thead th:nth-child(1){
     width: 25%;
 }
+.col1-3 thead th:nth-child(1){
+    width: 30%;
+}
+
 .col2-2 thead th:nth-child(2){
     width: 20%;
 }
+.col2-2_5 thead th:nth-child(2){
+    width: 25%;
+}
+
 .col3-1_5 thead th:nth-child(3){
     width: 15%;
 }
+.col3-3 thead th:nth-child(3){
+    width: 30%;
+}
+
 .col4-3_5 thead th:nth-child(4){
     width: 35%;
 }
+.col4-1_5 thead th:nth-child(4){
+    width: 15%;
+}
+
 .col5-0_5 thead th:nth-child(5){
     width: 5%;
 }

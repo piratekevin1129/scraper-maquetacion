@@ -123,9 +123,27 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
 }
+.j-between{
+    justify-content: space-between;
+}
+.a-center{
+    align-items: center;
+}
 .column{
     flex-direction: column;
 }
 .row{
     flex-direction: row;
+}
+.w100{
+    width: 100%;
+}
+.p-relative{
+    position: relative;
+}
+.w-4_g-20{
+    width: auto;
+    width: calc((100% - (20px * 3)) / 4);
+    width: -moz-calc((100% - (20px * 3)) / 4);
+    margin-right: 20px;
 }
