@@ -120,6 +120,7 @@
     background-color: #374151;
 }
 .status-progressbar > div{
+    height: 100%;
     transition: width 2s ease-out;
 }
 .status-percent{
@@ -146,7 +147,7 @@
 }
 .status-container-updating .status-progressbar > div{
     background-color: rgba(23,162,184, 1);
-    width: 100%;
+    width: 50%;
 }
 
 .table-options-btn{

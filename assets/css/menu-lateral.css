@@ -46,11 +46,44 @@
 .menu-lateral-logo h1{
     display: block;
     width: auto;
-    width: calc(100% - 50px);
-    width: -moz-calc(100% - 50px);
+    width: calc(100% - (50px + 40px));
+    width: -moz-calc(100% - (50px + 40px));
     font-size: 1.2rem;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
+}
+
+.menu-lateral-back-btn{
+    position: relative;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+}
+.menu-lateral-back-btn::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(19,51,62,1);
+    transition: width 0.25s, height 0.25s;
+}
+.menu-lateral-back-btn i{
+    font-size: 1rem;
+    color: #ffffff;
+    position: relative;
+}
+.menu-lateral-back-btn:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
 }
 
 #menu-lateral{
